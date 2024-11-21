@@ -1,0 +1,63 @@
+﻿@page
+@model Tournament_Web_Application.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form class="login-form" method="post">
+                <div class="form-header">
+                    <h3>Login</h3>
+                    <p>Login into your account</p>
+                </div>
+                 <br/>
+                 @if(TempData["error"] != null)
+                    {
+                        <h3 style="color:red">@TempData["error"] </h3>
+                    }
+                <div class="form-body">
+                    <div class="input-wrapper">
+                       <label asp-for="Username">Username:</label>
+                       <input asp-for="Username" placeholder="Please enter your username">
+                       <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="input-wrapper">
+                        <label asp-for="Password">Password:</label>
+                        <input type="password" asp-for="Password" placeholder="Please enter your password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <input type="submit" value="Sign In">
+                    <div class="footer-content">
+                        <p>Don't have an account?</p>
+                        <a asp-page="/CreateAccount">Sign Up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+</html>

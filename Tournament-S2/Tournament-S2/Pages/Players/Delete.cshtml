@@ -1,0 +1,44 @@
+﻿@page
+@using BLL.Enum
+@model Tournament_Web_Application.Pages.Players.DeleteModel
+@{
+    ViewData["Title"] = "Delete Player";
+}
+
+<div class="content">
+    <form class="form" method="post">
+        <input type="hidden" asp-for="PlayerDTO.Id">
+        <div class="form-info">
+            <h3>Delete player</h3>
+            <br />
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Player Name</label>
+                <input asp-for="PlayerDTO.Name" disabled>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Player Nationality</label>
+                <input asp-for="PlayerDTO.Nationality" disabled>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Date Of Birth</label>
+                <input asp-for="PlayerDTO.DateOfBirth" type="date" disabled>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Team</label>
+                <input asp-for="PlayerDTO.TeamDTO.Name" disabled>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="Delete">
+            <a asp-page="/Players/Player" class="back-btn">Go Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }

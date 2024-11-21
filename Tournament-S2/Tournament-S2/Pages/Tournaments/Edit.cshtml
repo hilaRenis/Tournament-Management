@@ -1,0 +1,48 @@
+﻿@page
+@using BLL.Enum
+@model Tournament_Web_Application.Pages.Tournaments.EditModel
+@{
+    ViewData["Title"] = "Edit Tournament";
+}
+
+<div class="content">
+    <form class="form" method="post">
+        <input type="hidden" asp-for="TournamentDTO.Id">
+        <div class="form-info">
+            <h3>Edit tournament</h3>
+            <br />
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Tournament Name</label>
+                <input asp-for="TournamentDTO.TournamentName">
+                <span asp-validation-for="TournamentDTO.TournamentName" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Tournament Type</label>
+                <select asp-for="TournamentDTO.TournamentTypeId" asp-items="Model.TournamentsType"></select>
+                <span asp-validation-for="TournamentDTO.TournamentTypeId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Entry Fee</label>
+                <input asp-for="TournamentDTO.EntryFee">
+                <span asp-validation-for="TournamentDTO.EntryFee" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Prize Pool</label>
+                <input asp-for="TournamentDTO.PrizePool">
+                <span asp-validation-for="TournamentDTO.PrizePool" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="Save">
+            <a asp-page="/Tournaments/Tournament" class="back-btn">Go Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }

@@ -1,0 +1,49 @@
+﻿@page
+@model Tournament_Web_Application.Pages.Match.DeleteModel
+@{
+    ViewData["Title"] = "Delete Match";
+}
+
+<div class="content">
+    <form class="form" method="post">
+        <input type="hidden" asp-for="MatchDTO.Id">
+        <div class="form-info">
+            <h3>Delete match</h3>
+            <br />
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Date Of Match</label>
+                <input asp-for="MatchDTO.DateOfMatch" disabled>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Location</label>
+                <input asp-for="MatchDTO.Location" disabled>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Tournament</label>
+                <input asp-for="MatchDTO.TournamentName" disabled>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Team 1</label>
+                <input asp-for="MatchDTO.Team1" disabled>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Team 2</label>
+                <input asp-for="MatchDTO.Team2" disabled>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="Delete">
+            <a asp-page="/Match/Match" class="back-btn">Go Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }

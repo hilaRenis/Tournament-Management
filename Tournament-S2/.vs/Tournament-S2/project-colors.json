@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f192f9dd-0072-4ff6-896f-8f16521de1a7": {
+      "ProjectGuid": "f192f9dd-0072-4ff6-896f-8f16521de1a7",
+      "DisplayName": "Tournament-S2",
+      "ColorIndex": 0
+    },
+    "f6843cf7-cf25-4f17-a2fa-747b3d727eb7": {
+      "ProjectGuid": "f6843cf7-cf25-4f17-a2fa-747b3d727eb7",
+      "DisplayName": "TournamentDesktop-S2",
+      "ColorIndex": 1
+    },
+    "2928a0d4-c772-4e89-a2ef-8ece76681bd0": {
+      "ProjectGuid": "2928a0d4-c772-4e89-a2ef-8ece76681bd0",
+      "DisplayName": "BLL",
+      "ColorIndex": 2
+    },
+    "861adbf5-82f3-4f67-add1-39d9284006cc": {
+      "ProjectGuid": "861adbf5-82f3-4f67-add1-39d9284006cc",
+      "DisplayName": "DAL",
+      "ColorIndex": 3
+    },
+    "39d31f8c-00ab-4478-8008-59d2fcdb6ff7": {
+      "ProjectGuid": "39d31f8c-00ab-4478-8008-59d2fcdb6ff7",
+      "DisplayName": "UnitTest",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

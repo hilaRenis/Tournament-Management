@@ -1,0 +1,48 @@
+﻿@page
+@using BLL.Enum
+@model Tournament_Web_Application.Pages.Players.EditModel
+@{
+    ViewData["Title"] = "Edit Player";
+}
+
+<div class="content">
+    <form class="form" method="post">
+        <input type="hidden" asp-for="PlayerDTO.Id">
+        <div class="form-info">
+            <h3>Edit player</h3>
+            <br />
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Player Name</label>
+                <input asp-for="PlayerDTO.Name">
+                <span asp-validation-for="PlayerDTO.Name" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Player Nationality</label>
+                <select asp-for="PlayerDTO.NationalityId" asp-items="Model.Nationalities"></select>
+                <span asp-validation-for="PlayerDTO.NationalityId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Date Of Birth</label>
+                <input asp-for="PlayerDTO.DateOfBirth" type="date">
+                <span asp-validation-for="PlayerDTO.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Team</label>
+                <select asp-for="PlayerDTO.TeamDTO.Id" asp-items="Model.Teams"></select>
+                <span asp-validation-for="PlayerDTO.TeamDTO.Id" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="Save">
+            <a asp-page="/Players/Player" class="back-btn">Go Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }

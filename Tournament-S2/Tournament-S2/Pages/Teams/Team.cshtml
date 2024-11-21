@@ -1,0 +1,54 @@
+﻿@page
+@model Tournament_Web_Application.Pages.Teams.TeamModel
+@{
+     ViewData["Title"] = "Team";
+}
+
+       <div class="content">
+                <div class="info">
+                    <h2>Teams</h2>
+                    <a asp-page="Create">Add new</a>
+                </div>
+                 @if(TempData["success"] != null)
+                    {
+                        <h3 style="color:green">@TempData["success"] </h3>
+                    }
+                 <br/>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Team Name</th>
+                            <th></th>
+                        </tr>
+                        @foreach(var obj in Model.Teams){
+                         <tr>
+                            <td>@obj.Name</td>
+                            <td class="actions">
+                                <a asp-page="Edit" asp-route-id="@obj.Id">
+                                    <span>
+                                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.361 2.91158C16.5764 1.69614 18.547 1.69614 19.7625 2.91158L21.0884 4.23753C22.3039 5.45297 22.3039 7.4236 21.0884 8.63904L8.63904 21.0884C8.05536 21.6721 7.26373 22 6.43828 22H2.84882C2.38003 22 2 21.62 2 21.1512V17.5617C2 16.7363 2.32791 15.9446 2.91158 15.361L15.361 2.91158ZM18.5621 4.112C18.0096 3.55952 17.1138 3.55952 16.5614 4.112L14.2351 6.43828L17.5617 9.76491L19.888 7.43863C20.4405 6.88615 20.4405 5.99042 19.888 5.43794L18.5621 4.112ZM16.3613 10.9653L13.0347 7.6387L4.112 16.5614C3.84669 16.8267 3.69764 17.1865 3.69764 17.5617V20.3024H6.43828C6.81349 20.3024 7.17332 20.1533 7.43863 19.888L16.3613 10.9653Z"
+                                                fill="#030D45" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a asp-page="Delete" asp-route-id="@obj.Id">
+                                    <span>
+                                        <svg width="24px" height="24px" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path fill="none" d="M0 0h24v24H0z" />
+                                                <path
+                                                    d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-4.586 6l1.768 1.768-1.414 1.414L12 15.414l-1.768 1.768-1.414-1.414L10.586 14l-1.768-1.768 1.414-1.414L12 12.586l1.768-1.768 1.414 1.414L13.414 14zM9 4v2h6V4H9z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+       </div>

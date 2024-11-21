@@ -1,0 +1,43 @@
+﻿@page
+@model Tournament_Web_Application.Pages.Users.DeleteModel
+@{
+      ViewData["Title"] = "Delete User";
+}
+
+   <div class="content">
+                <form class="form" method="post">
+                    <input type="hidden" asp-for="user.Id">
+                    <div class="form-info">
+                        <h3>Delete tournament</h3>
+                        <br/>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-wrapper">
+                            <label for="">Name</label>
+                            <input asp-for="user.Name" disabled >
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="">LastName</label>
+                            <input asp-for="user.LastName" disabled >
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-wrapper">
+                            <label for="">Username</label>
+                            <input asp-for="user.Username" disabled >
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="">Role</label>
+                            <input asp-for="user.Role" disabled >
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                         <input type="submit" value="Delete">
+                         <a asp-page="/Users/User" class="back-btn">Go Back</a>
+                    </div>
+                </form>
+            </div>
+
+    @section Scripts {
+       <partial name="_ValidationScriptsPartial" />
+    }

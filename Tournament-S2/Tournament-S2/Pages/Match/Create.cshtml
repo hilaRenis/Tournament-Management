@@ -1,0 +1,52 @@
+﻿@page
+@model Tournament_Web_Application.Pages.Match.CreateModel
+@{
+    ViewData["Title"] = "Create Match";
+}
+<div class="content">
+    <form class="form" method="post">
+        <div class="form-info">
+            <h3>Create Match</h3>
+            <br />
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Date Of Match</label>
+                <input asp-for="MatchDTO.DateOfMatch">
+                <span asp-validation-for="MatchDTO.DateOfMatch" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Location</label>
+                <select asp-for="MatchDTO.LocationId" asp-items="Model.Locations"></select>
+                <span asp-validation-for="MatchDTO.LocationId" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Tournament</label>
+                <select asp-for="MatchDTO.TournamentId" asp-items="Model.Tournaments"></select>
+                <span asp-validation-for="MatchDTO.TournamentId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="">Team 1</label>
+                <select asp-for="MatchDTO.Team1Id" asp-items="Model.Teams"></select>
+                <span asp-validation-for="MatchDTO.Team1Id" class="text-danger"></span>
+            </div>
+            <div class="input-wrapper">
+                <label for="">Team 2</label>
+                <select asp-for="MatchDTO.Team2Id" asp-items="Model.Teams"></select>
+                <span asp-validation-for="MatchDTO.Team2Id" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-footer">
+            <input type="submit" value="Save">
+            <a asp-page="/Match/Match" class="back-btn">Go Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    }

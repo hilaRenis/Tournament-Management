@@ -1,0 +1,53 @@
+﻿@page
+@using BLL.Enum
+@model Tournament_Web_Application.Pages.Users.EditModel
+@{
+      ViewData["Title"] = "Edit User";
+}
+
+   <div class="content">
+                <form class="form" method="post">
+                    <input type="hidden" asp-for="UserDTO.Id">
+                    <div class="form-info">
+                        <h3>Change Details</h3>
+                        <br/>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-wrapper">
+                            <label for="">Name</label>
+                            <input asp-for="UserDTO.Name">
+                            <span asp-validation-for="UserDTO.Name" class="text-danger"></span>
+                        </div>
+                       <div class="input-wrapper">
+                            <label for="">LastName</label>
+                            <input asp-for="UserDTO.LastName">
+                            <span asp-validation-for="UserDTO.LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-wrapper">
+                            <label for="">UserName</label>
+                            <input asp-for="UserDTO.Username">
+                            <span asp-validation-for="UserDTO.Username" class="text-danger"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="">Password</label>
+                            <input type="password" name="UserDTO.Password" id="user_Password">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-wrapper">
+                            <label for="">Role</label>
+                            <input asp-for="UserDTO.Role" readonly>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                         <input type="submit" value="Save">
+                         <a asp-page="/Users/User" class="back-btn">Go Back</a>
+                    </div>
+                </form>
+            </div>
+
+    @section Scripts {
+       <partial name="_ValidationScriptsPartial" />
+    }

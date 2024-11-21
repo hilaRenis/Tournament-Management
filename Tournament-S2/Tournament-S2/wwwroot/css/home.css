@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.side-menu {
+  width: 320px;
+  height: 100vh;
+  background: #001f5c;
+}
+.side-menu .title {
+  padding: 25px 15px;
+  height: 60px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.main-content .header {
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-content .content {
+  background: #eff1f4;
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+.menu-items {
+  margin-top: 25px;
+}
+
+.menu-items .item {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu-items .item a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-items .item:hover {
+  background-color: #183672;
+}
+
+.menu-items .item svg {
+  fill: #fff;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+.content .photo img {
+    width: 400px;
+    height: 400px;
+    padding-top: 30px;
+}
+
+.content table {
+  border-collapse: collapse;
+  width: 800px;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: rgba(60, 129, 252, 0.8);
+  color: white;
+}
+
+.actions a {
+   text-decoration: none;
+}
+
+.actions span svg {
+  width: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.info {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.info button {
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #3c81fc;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.info a {
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #3c81fc;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+
+.form {
+  margin-top: 80px;
+  width: 800px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.form-info h3 {
+  color: #001f5c;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-info p {
+  font-size: 18px;
+  line-height: 23px;
+  color: #c7cbd3;
+  margin-top: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.input-wrapper label {
+  font-size: 18px;
+  line-height: 23px;
+  color: #3378ff;
+  margin-bottom: 5px;
+}
+
+.input-wrapper input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #c7cbd3;
+  outline: none;
+  padding: 0 15px;
+}
+
+.input-wrapper select {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #c7cbd3;
+  outline: none;
+  padding: 0 15px;
+}
+
+.form-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.form-footer button {
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #3c81fc;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+input[type=submit] {
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #3c81fc;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right:15px
+}
+
+.back-btn {
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background: #C7CCD5;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
